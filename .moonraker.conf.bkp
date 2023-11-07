@@ -1,13 +1,10 @@
 [server]
 host = 0.0.0.0
 port = 7125
-enable_debug_logging = False
 max_upload_size = 1024
 
 [file_manager]
-config_path = ~/klipper_config
-log_path = ~/klipper_logs
-enable_object_processing = False
+enable_object_processing = True
 
 [authorization]
 cors_domains = 
@@ -42,4 +39,12 @@ path = ~/klipper_z_calibration
 origin = https://github.com/protoloft/klipper_z_calibration.git
 install_script = install.sh
 managed_services = klipper
+
+[update_manager Klipper-Adaptive-Meshing-Purging]
+type = git_repo
+channel = dev
+path = ~/Klipper-Adaptive-Meshing-Purging
+origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+managed_services = klipper
+primary_branch = main
 
